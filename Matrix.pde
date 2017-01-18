@@ -1,7 +1,7 @@
-Letter[] letters = new Letter[100];
+Letter[] letters = new Letter[150];
 
 void setup() {
-  size(640, 360);
+  size(1024, 768);
   for (int i = 0; i<letters.length; i++) {
     letters[i] = new Letter();
     letters[i].SetDisplayChar();
@@ -9,7 +9,7 @@ void setup() {
 }
 
 void draw() {
-  background(255);
+  background(0);
   for (int i = 0; i<letters.length; i++) {
     letters[i].Fall();
     letters[i].Show();
