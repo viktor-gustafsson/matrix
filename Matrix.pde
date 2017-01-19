@@ -1,4 +1,4 @@
-Letter[] letters = new Letter[150];
+Letter[] letters = new Letter[300];
 
 void setup() {
   size(1024, 768);
@@ -13,6 +13,5 @@ void draw() {
   for (int i = 0; i<letters.length; i++) {
     letters[i].Fall();
     letters[i].Show();
-    letters[i].ShowHistory();
   }
 }
