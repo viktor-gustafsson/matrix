@@ -1,27 +1,39 @@
 class Letter {
   float x = random(width);
   float y = random(-1500, 0);
-  float z = random(10, 255);
-  float speed = random(4, 10);
+  float z = random(50, 255);
+  float speed = random(6, 12);
   char c;
-  ArrayList history = new ArrayList();
-
+  ArrayList<PVector> history = new ArrayList<PVector>();
+  
   PFont f = createFont("Arial", 16, true);
 
   void Fall() {
     y = y+speed;
-    if (y>height+10) {
+    if (y>height+50) {
       y=random(-200, -100);
       SetDisplayChar();
     }
-    history.add(y);
-    println(history);
+    if (history.size() > 5) {
+      history.remove(0);
+    }
+    if(y%2 < 0.5){
+     history.add(new PVector(x,y,z)); 
+    }
   }
 
   void Show() {
     textFont(f, 16);
     fill(95, 244, 66, z);
     text(c, x, y);
+  }
+
+  void ShowHistory() {
+    for (int i = 0; i < history.size(); i++) {
+      PVector v = history.get(i);
+      fill(95, 244, 66, v.z);   
+      text(c, x, v.y);
+    }
   }
 
   void SetDisplayChar() {

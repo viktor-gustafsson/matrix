@@ -13,5 +13,6 @@ void draw() {
   for (int i = 0; i<letters.length; i++) {
     letters[i].Fall();
     letters[i].Show();
+    letters[i].ShowHistory();
   }
 }
