@@ -1,5 +1,4 @@
-Letter[] letters = new Letter[300];
-
+Letter[] letters = new Letter[500];
 void setup() {
   size(1024, 768);
   for (int i = 0; i<letters.length; i++) {
