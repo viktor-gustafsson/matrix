@@ -4,6 +4,7 @@ void setup() {
   for (int i = 0; i<letters.length; i++) {
     letters[i] = new Letter();
     letters[i].SetDisplayChar();
+    frameRate(60);
   }
 }
 

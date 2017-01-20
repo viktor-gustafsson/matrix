@@ -22,7 +22,7 @@ class Letter {
     if (history.size() > 5) {
       history.remove(0);
     }
-    if (y%2 < 0.3) {
+    if (frameCount %5 ==0) {
       history.add(new PVector(x, y, z/2));
     }
   }
