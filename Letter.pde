@@ -36,6 +36,9 @@ class Letter {
     fill(187, 255, 186, z); 
     text(c, x, y);
     ShowHistory();
+    if(random(0,200)<1.0){
+     SetDisplayChar(); 
+    }
   }
 
   void ShowHistory() {
