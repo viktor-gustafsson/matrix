@@ -28,7 +28,7 @@ class Letter {
     SetDisplayChar();
   }
   void Flash() {
-    fill(187, 255, 186, 255);
+    fill(187, 255, 186, 200);
     rect(x, y, 15, 15);
   }
 
