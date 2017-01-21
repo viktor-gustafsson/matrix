@@ -17,8 +17,11 @@ void setup() {
 
 void draw() {
   background(0);
-  l = letters.get((int)random(letters.size()));
-  l.Flash();
+  if (frameCount%5==0)
+  {
+    l = letters.get((int)random(letters.size()));
+    l.Flash();
+  }
   for (int i = 0; i<letters.size(); i++) {
     l = letters.get(i);
     l.Fall();

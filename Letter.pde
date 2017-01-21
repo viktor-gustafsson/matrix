@@ -29,7 +29,7 @@ class Letter {
   }
   void Flash() {
     fill(187, 255, 186, 200);
-    rect(x, y, 15, 15);
+    rect(x, y, 10, 20);
   }
 
   void Show() {
