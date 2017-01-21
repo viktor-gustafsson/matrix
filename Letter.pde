@@ -21,7 +21,7 @@ class Letter {
   }
 
   void ResetChar() {
-    y = random(-1500, 0);
+    y = random(-200, 0);
     z = random(50, 185);
     speed=random(3, 5);
     //set new char
